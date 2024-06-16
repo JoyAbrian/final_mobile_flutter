@@ -1,2 +1,4 @@
 # Final_Mobile_Flutter
- Wireframe final mobile flutter
+
+ Joy Abrian Rantepasang
+ H071221030
