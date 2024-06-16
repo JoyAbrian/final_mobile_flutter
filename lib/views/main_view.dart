@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MainView extends StatelessWidget {
-  const MainView({super.key});
+  const MainView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class MainView extends StatelessWidget {
         backgroundColor: Colors.blue,
         actions: const [
           Padding(
-            padding: EdgeInsets.only(right: 16.0),
+            padding: EdgeInsets.only(right: 16),
             child: CircleAvatar(
               backgroundImage: AssetImage('images/avatar.png'),
             ),
@@ -25,14 +25,17 @@ class MainView extends StatelessWidget {
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.all(8.0),
-            child: const Text(
-              'Favorite Waifu',
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
+          Padding(
+            padding: const EdgeInsets.only(top: 16, left: 15), // Adjust top margin as needed
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              child: const Text(
+                'Favorite Waifu',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
