@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class MainView extends StatelessWidget {
   const MainView({Key? key}) : super(key: key);
@@ -22,11 +23,11 @@ class MainView extends StatelessWidget {
           ),
         ],
       ),
-      body: Row(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 16, left: 15), // Adjust top margin as needed
+            padding: const EdgeInsets.only(top: 16, left: 15),
             child: Container(
               padding: const EdgeInsets.all(8),
               child: const Text(
@@ -38,6 +39,30 @@ class MainView extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          CarouselSlider(
+            options: CarouselOptions(
+              height: 600,
+              enlargeCenterPage: true,
+              autoPlay: true,
+              aspectRatio: 16/9,
+              autoPlayCurve: Curves.fastOutSlowIn,
+              enableInfiniteScroll: true,
+              viewportFraction: 0.8,
+            ),
+            items: [
+              'images/1.png',
+              'images/2.png',
+              'images/3.png',
+              'images/4.png',
+              'images/5.png',
+            ].map((item) => Center(
+              child: Image.asset(
+                item,
+                fit: BoxFit.cover,
+                width: 1000,
+              ),
+            )).toList(),
           ),
         ],
       ),

@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
           const Expanded(
             child: Center(
               child: Image(
-                image: AssetImage('images/logo.png'),
+                image: AssetImage('images/avatar.png'),
                 width: 100,
               ),
             ),
